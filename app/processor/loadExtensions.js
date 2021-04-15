@@ -5,7 +5,6 @@ export default async () => {
     const res = await fetch('./plugins/extensions.json');
     const config = await res.json();
 
-    console.log('location', window.location.href);
     const promises = config.extensions.map((name) =>
       import(`/plugins/${name}.js`)
     );
