@@ -14,7 +14,7 @@ export default async () => {
       });
     });
   } catch (err) {
-    console.log('location', window.location.href);
+    console.log(`location:  ${window.location.href}`);
     console.log(`Error loading plugins: ${err.message}`);
   }
 };
