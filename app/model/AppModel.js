@@ -1,9 +1,9 @@
 import { execute, getImportedFunctions } from '../processor/processor.js';
 import Model from '../lib/Model.js';
-import loadExtensions from '../processor/loadExtensions.js';
+import loadPlugins from '../processor/loadPlugins.js';
 
 async function AppModel() {
-  await loadExtensions();
+  await loadPlugins();
 
   const initialState = execute(undefined, 'noop');
 

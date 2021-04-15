@@ -5,8 +5,6 @@ export function fact(x) {
   throw new Error('Not implemented');
 }
 
-const category = 'Mathematical';
-
 export default {
-  fact: { fn: fact, category, label: 'Factorial (!)' },
+  fact: { fn: fact, label: 'Factorial (!)' },
 };
