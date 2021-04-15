@@ -5,6 +5,8 @@ export default async () => {
     const res = await fetch('./plugins/plugins.json');
     const { plugins } = await res.json();
 
+    console.log(window.location.href);
+
     const promises = plugins.map((name) => import(`/plugins/${name}.js`));
     const modules = await Promise.all(promises);
     modules.forEach((module, index) => {
