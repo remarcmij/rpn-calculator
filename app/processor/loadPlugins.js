@@ -5,8 +5,6 @@ export default async () => {
     const res = await fetch('./plugins/plugins.json');
     const { plugins } = await res.json();
 
-    console.log('location', window.location.href);
-
     const promises = plugins.map((name) => import(`/plugins/${name}.js`));
     const modules = await Promise.all(promises);
     modules.forEach((module, index) => {
@@ -16,6 +14,7 @@ export default async () => {
       });
     });
   } catch (err) {
+    console.log('location', window.location.href);
     console.log(`Error loading plugins: ${err.message}`);
   }
 };
