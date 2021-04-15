@@ -6,7 +6,7 @@ export default async () => {
     const config = await res.json();
 
     const promises = config.extensions.map((name) =>
-      import(`/plugins/${name}.js`)
+      import(`../../plugins/${name}.js`)
     );
     const modules = await Promise.all(promises);
     modules.forEach((module) => {

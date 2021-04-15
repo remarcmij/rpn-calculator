@@ -30,10 +30,10 @@ export function getImportedFunctions() {
   );
 }
 
-export function addFunction(name, func, category, title) {
+export function addFunction(name, func, category, label) {
   func.type = 'import';
   func.category = category;
-  func.title = title;
+  func.label = label;
   switch (func.length) {
     case 1:
       unaryFunctions[name] = func;
