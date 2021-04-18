@@ -4,4 +4,5 @@ export default {
   enter: ([x, y, z]) => [x, x, y, z],
   rollDown: ([x, y, z, t]) => [y, z, t, x],
   noop: (stack) => stack,
+  pi: ([x, y, z]) => [Math.PI, x, y, z],
 };

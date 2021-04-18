@@ -14,6 +14,12 @@ const initialState = {
   error: null,
 };
 
+export const arcMap = {
+  sin: 'asin',
+  cos: 'acos',
+  tan: 'atan',
+};
+
 const stackLiftPrevention = ['enter', 'clx', 'sto'];
 
 export function getImportedFunctions() {
@@ -57,6 +63,14 @@ export function execute(state = initialState, keyCode) {
       stackLift: !stackLiftPrevention.includes(keyCode),
       error: null,
     };
+
+    if (keyCode === 'arc') {
+      return { ...state, ...extras, arc: !state.arc };
+    }
+
+    if (state.arc) {
+      keyCode = arcMap[keyCode] || keyCode;
+    }
 
     let func = bufferFunctions[keyCode];
     if (func && !(keyCode === 'chs' && state.buffer === '')) {

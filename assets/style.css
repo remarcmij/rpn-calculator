@@ -134,6 +134,10 @@ body {
   color: #ccc;
 }
 
+.arc {
+  background-color: #b0c4de;
+}
+
 .zoom {
   font-size: 1.1rem;
 }
