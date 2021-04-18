@@ -49,7 +49,7 @@ body {
   box-shadow: inset 0 0 4px #888;
 }
 
-#annunciator {
+.annunciator {
   height: 14px;
   color: red;
   font-size: 12px;
@@ -61,7 +61,7 @@ body {
   margin: 2px 0;
 }
 
-#extension-select {
+.extension-select {
   flex: 1;
   height: 40px;
   padding: 8px;
@@ -75,15 +75,15 @@ body {
   margin: 10px;
 }
 
-#extension-select:focus {
+.extension-select:focus {
   outline: none;
 }
 
-#extension-btn {
+.extension-btn {
   width: 50px;
 }
 
-#keypad-container {
+.keypad-container {
   flex: 1;
   display: grid;
   grid-template-columns: repeat(20, 1fr);
