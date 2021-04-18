@@ -14,7 +14,7 @@ function Keypad(parent) {
   Key(keypad, {
     keyCode: 'exp',
     classExtras: 'key-span-4 zoom',
-  }).innerHTML = `>𝑒<sup>𝑥</sub>`;
+  }).innerHTML = `𝑒<sup>𝑥</sub>`;
   Key(keypad, { keyCode: 'clr', classExtras: 'key-span-4' });
 
   // Row 2
@@ -82,7 +82,7 @@ function Keypad(parent) {
 
   keypad.addEventListener('click', (event) => {
     const keyCode = event.target.dataset.key;
-    execute(keyCode);
+    keyCode && execute(keyCode);
   });
 }
 

@@ -95,6 +95,10 @@ export function execute(state = initialState, keyCode) {
 
     throw new Error(`Not implemented: ${keyCode}`);
   } catch (error) {
-    return { ...state, error, keyCode };
+    if (error.name === 'Error') {
+      console.log(error.stack);
+      return { ...state, error, keyCode };
+    }
+    throw error;
   }
 }

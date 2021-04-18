@@ -1,8 +1,7 @@
-export function fact(x) {
-  // TODO replace next line with your code
-  throw new Error('Not implemented');
-}
+const degreesToRadians = (x) => (x * Math.PI) / 180.0;
+const radiansToDegrees = (x) => (x * 180.0) / Math.PI;
 
 export default {
-  fact: { fn: fact, label: 'Factorial (!)' },
+  degreesToRadians: { fn: degreesToRadians, label: 'degrees → radians' },
+  radiansToDegrees: { fn: radiansToDegrees, label: 'radians → degrees' },
 };

@@ -4,7 +4,7 @@ import createElement from '../lib/createElement.js';
 
 function DisplayWrapper(parent) {
   const displayContainer = createElement(parent, {
-    class: 'displayContainer',
+    class: 'display-container',
   });
   Annunciator(displayContainer);
   Display(displayContainer);
